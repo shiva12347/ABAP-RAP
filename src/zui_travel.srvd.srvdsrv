@@ -1,0 +1,4 @@
+@EndUserText.label: 'Travel RAP Service Definition'
+define service ZUI_TRAVEL {
+  expose ZSH_C_Travel;
+}

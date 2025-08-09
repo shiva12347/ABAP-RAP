@@ -1,0 +1,6 @@
+@EndUserText.label: 'TARVEL_Service_Deifination'
+define service ZSH_TRAVEL_SD {
+  expose ZSH_TRAVEL_C;
+  expose ZSH_BOOKING_C;
+  expose ZSH_BOOKINGSUPP_C;
+}

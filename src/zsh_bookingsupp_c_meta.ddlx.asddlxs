@@ -1,0 +1,41 @@
+@Metadata.layer: #CORE
+annotate entity ZSH_BOOKINGSUPP_C
+    with 
+{
+
+  @UI.facet: [{ id:'BookingSupplyment',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Booking Supplyment',
+                position: 10
+
+              }]
+
+   @UI.hidden: true
+   BooksupplUuid;
+    @UI.hidden: true
+   TravelUUID;
+    @UI.hidden: true
+   BookingUUID;
+    @UI:{ lineItem: [{ position: 20, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  20, importance:   #HIGH  }] }
+   BookingSupplementId;
+    @UI:{ lineItem: [{ position: 30, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  30, importance:   #HIGH  }] }
+   SupplementId;
+    @UI:{ lineItem: [{ position: 40, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  40, importance:   #HIGH  }] }
+   Price;
+    @UI:{ lineItem: [{ position: 50, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  50, importance:   #HIGH  }] }
+   CurrencyCode;
+    @UI:{ lineItem: [{ position: 60, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  60, importance:   #HIGH  }] }
+   LocalLastChangedAt;
+   /* Associations */
+    @UI.lineItem: [ { position: 30 } ]
+   _Booking;   
+    @UI.lineItem: [ { position: 30 } ]
+   _Travel;
+    
+}

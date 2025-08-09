@@ -1,0 +1,65 @@
+@Metadata.layer: #CORE
+// its a object page
+annotate entity ZSH_BOOKING_C
+    with 
+{
+
+@UI.facet: [{ id:'Booking',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Booking',
+                position: 20
+
+           },
+           {
+               id: 'BookingSupplyment',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'BookingSupplyment',
+               targetElement: '_BookingSupplement',
+               position: 20
+           }
+           ]
+                    
+   @UI.hidden: true
+   BookingUuid;
+   @UI.hidden: true
+   TravelUUID;
+    @UI:{ lineItem: [{ position: 10, importance: #HIGH  }] }  // To see as  Column on Object page
+    @UI:{ identification: [{  position:  10, importance:   #HIGH  }] }
+   BookingId;
+    @UI:{ lineItem: [{ position: 20, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  20, importance:   #HIGH  }] }
+   BookingDate;
+    @UI:{ lineItem: [{ position: 30, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  30, importance:   #HIGH  }] }
+   CustomerId;
+    @UI:{ lineItem: [{ position: 40, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  40, importance:   #HIGH  }] }
+   CarrierId;
+     @UI:{ lineItem: [{ position: 50, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  50, importance:   #HIGH  }] }
+   ConnectionId;
+    @UI:{ lineItem: [{ position: 60, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  60, importance:   #HIGH  }] }
+   FlightDate;
+       @UI:{ lineItem: [{ position: 70, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  70, importance:   #HIGH  }] }
+   FlightPrice;
+       @UI:{ lineItem: [{ position: 80, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  80, importance:   #HIGH  }] }
+   CurrencyCode;
+       @UI:{ lineItem: [{ position: 90, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  90, importance:   #HIGH  }] }
+   BookingStatus;
+       @UI:{ lineItem: [{ position: 100, importance: #HIGH  }] }
+    @UI:{ identification: [{  position:  100, importance:   #HIGH  }] }
+   LocalLastChangedAt;
+   
+   /* Associations */
+   @UI.lineItem: [ { position: 20 } ]
+   _BookingSupplement;
+   @UI.lineItem: [ { position: 30 } ]
+   _Travel;
+    
+}

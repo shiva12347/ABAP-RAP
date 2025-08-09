@@ -1,0 +1,17 @@
+managed implementation in class zbp_sh_i_travel unique;
+strict ( 2 );
+
+define behavior for ZSH_I_Travel
+persistent table ZSH_TRAVEL
+lock master
+authorization master ( instance )
+etag master last_changed_at
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly ) travel_uuid, local_created_by, local_created_at,
+                     local_last_changed_by, local_last_changed_at,
+                     last_changed_at;
+}
